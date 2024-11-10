@@ -1,0 +1,58 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 50px;
+    padding: 20px;
+    position: relative;
+   /* Ensures the pseudo-element covers the viewport */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Ensures background doesn't scroll with content */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('nightt.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px); /* Apply blur effect to the background image */
+    z-index: -1; /* Place it behind the main content */
+    transform: scale(1.1); /* Slightly scale to avoid edges appearing */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(206, 204, 204, 0.6); /* Semi-transparent for the container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 0 10px rgba(235, 223, 223, 0.1);
+    position: relative;
+    z-index: 1; /* Keeps it above the blurred background */
+}
+
+h2 {
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 9px;
+    margin: 4px 0;
+    border: 1px solid rgb(53, 51, 51);
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for inputs */
+}
+
+button {
+    background-color: rgba(171, 122, 218, 0.8); /* Semi-transparent button */
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: rgba(155, 85, 221, 0.8); /* Slightly darker transparent color on hover */
+}
